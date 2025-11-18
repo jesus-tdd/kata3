@@ -1,5 +1,6 @@
-package io;
+package app;
 
+import io.PokeLoader;
 import model.Pokemon;
 
 import java.io.BufferedReader;
@@ -10,8 +11,14 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
-public class RemotePokeLoader implements PokeLoader{
+public class RemotePokeLoader implements PokeLoader {
+    private final Function<String, Pokemon> deserialize;
+
+    public RemotePokeLoader(Function<String, Pokemon> deserialize) {
+        this.deserialize = deserialize;
+    }
 
     @Override
     public List<Pokemon> loadAll() {
@@ -34,12 +41,11 @@ public class RemotePokeLoader implements PokeLoader{
 
     private List<Pokemon> loadFrom(BufferedReader reader) throws IOException {
         List<Pokemon> list = new ArrayList<>();
-        PokeParser parser = new CsvPokeParser();
         reader.readLine();
         while (true) {
             String line = reader.readLine();
             if (line == null) break;
-            list.add(parser.parse(line));
+            list.add(deserialize.apply(line));
         }
         return list;
     }
