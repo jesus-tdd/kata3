@@ -22,6 +22,8 @@ Implementación de la clase _Histogram_.
 
 Implementación de la clase _HistogramBuilder_ (patrón builder para _Histogram_).
 
+Construcción de un histograma a través del _dataset_ utilizado en la _kata 2_.
+
 
 ### Créditos
 El dataset en cuestión: [github.com/lgreski/pokemonData](https://github.com/lgreski/pokemonData/blob/master/Pokemon.csv)
