@@ -29,4 +29,4 @@ Construcción de un histograma a través del _dataset_ utilizado en la _kata 2_.
 El dataset en cuestión: [github.com/lgreski/pokemonData](https://github.com/lgreski/pokemonData/blob/master/Pokemon.csv)
 
 ## 
-Ver vídeo (próximamente) | [Todas las Katas](https://www.youtube.com/playlist?list=PL_MLZ_QLgMQ8v5oYzwturBAajvCAg-p8c)
+[Ver vídeo](https://www.youtube.com/watch?v=SD2kZzLl3wg) | [Todas las Katas](https://www.youtube.com/playlist?list=PL_MLZ_QLgMQ8v5oYzwturBAajvCAg-p8c)
